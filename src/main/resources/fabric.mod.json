@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "stat_write",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Stat Write",
+  "description": "Coordinate output at last!",
   "authors": [
-    "Me!"
+    "mov51"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://mov51.net/",
+    "sources": "https://github.com/mov51/statWrite"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/stat_write/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.mov51.statWrite.StatWrite"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "statWrite.mixins.json"
   ],
 
   "depends": {
