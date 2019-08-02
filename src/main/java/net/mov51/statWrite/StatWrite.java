@@ -19,10 +19,9 @@ public class StatWrite implements ModInitializer {
 	public void onInitialize() {
 		if (Files.notExists(Conf.toPath())) {
 			if(Conf.mkdirs()){
-				System.out.println("Folder made!");
+				System.out.println("StatWrite Conf and output Folder made!");
 			}
 		}
-
 		ClientTickCallback.EVENT.register((mc) -> {
 			PlayerEntity clientPlayer = MinecraftClient.getInstance().player;
 			if (clientPlayer != null ){
@@ -33,9 +32,10 @@ public class StatWrite implements ModInitializer {
 			}
 		});
 	}
-	public void write(Double string, String filePath) {
+	public void write(Double data, String filePath) {
 		try (BufferedWriter out = new BufferedWriter (new FileWriter(Conf + filePath))) {
-			out.write(String.valueOf(string));
+			int intData = (int) Math.round(data);
+			out.write(String.valueOf(intData));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
